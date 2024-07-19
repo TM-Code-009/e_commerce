@@ -13,7 +13,7 @@ import {
 const page = () => {
   //   const data = Array.from({ length: 10 });
   const data = useSelector((state: any) => state.reducer.cart);
-  const dispatch = useDispatch();
+  const adding = useDispatch();
 
   const cost = data
     .map((el: any) => {
@@ -56,7 +56,7 @@ const page = () => {
                   Buy now
                 </Button>
                 <Button className="w-[100px] h-[40px] bg-green-300  hover:bg-green-300"  onClick={() => {
-                      dispatch(deleteProduct(items));
+                      adding(deleteProduct(items));
                     }}
                   >
                   Delete
@@ -67,13 +67,13 @@ const page = () => {
 
               <div className="gap-3 flex flex-col">
                  <Button className="w-[60px] h-[40px] bg-green-400 text-white font-bold" onClick={() => {
-                      dispatch(addProductToCart(items));
+                      adding(addProductToCart(items));
                     }}>
                    +
                  </Button>
 
                  <Button className="w-[60px] h-[40px] bg-slate-400 text-white font-bold"   onClick={() => {
-                      dispatch(removeProductToCart(items));
+                      adding(removeProductToCart(items));
                     }}>
                    -
                  </Button>

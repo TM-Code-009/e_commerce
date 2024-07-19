@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProduct, addProductToCart } from "./global/redux";
 
 const page = () => {
-  const dispatch = useDispatch();
+  const adding = useDispatch();
   const data = useSelector((state: any) => state.reducer.products);
   const url = "https://669a88b39ba098ed61fffcbc.mockapi.io/stores";
 
@@ -25,7 +25,7 @@ const page = () => {
   useEffect(() => {
     readStore().then((res) => {
       // console.log("show: ", res);
-      dispatch(addProduct(res));
+      adding(addProduct(res));
     });
   }, []);
 
@@ -48,7 +48,7 @@ const page = () => {
             <p className=" text-[14px] text-green-400 underline">₦{items.price}</p>
 
             <Button
-              onClick={() => dispatch(addProductToCart(items))}
+              onClick={() => adding(addProductToCart(items))}
               className="mt-3 w-[200px] h-[40px] rounded-none  bg-slate-300 font-semibold"
               >Add to Cart</Button>
             </div>
