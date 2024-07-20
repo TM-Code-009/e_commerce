@@ -16,17 +16,17 @@ const redux = createSlice({
       let remove = state.cart.filter((el: any) => el.id !== payload.id);
       state.cart = remove;
     },
-    addProductToCart: (state, { payload }: any) => {
+    addProductToCart: (state:any, { payload }: any) => {
       const check:any =  state.cart.findIndex((el: any) => el.id === payload.id);
 
       if (check >= 0) {
-        state.cart[check]!.qty += 1;
+        state.cart[check].qty += 1;
       } else {
         state.cart.push({ ...payload, qty: 1 });
       }
     },
 
-    removeProductToCart: (state, { payload }: any) => {
+    removeProductToCart: (state:any, { payload }: any) => {
       const check: any = state.cart.findIndex(
         (el: any) => el.id === payload.id
       );

@@ -13,7 +13,9 @@ const Header = () => {
     return(
         <div className="w-full h-[80px] flex justify-center items-center  ">
            <div className="w-[95%] h-full flex justify-between items-center border-b ">
-                <p>Home</p>
+
+                   <p>Home</p>
+
               <div>
               <Link href="/cart">
           <section className="relative">
