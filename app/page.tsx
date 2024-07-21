@@ -33,8 +33,8 @@ const page = () => {
   return (
     <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
       {data?.map((items: any, i: number) => (
-        <div className="w-full flex justify-center items-center">
-          <div key={i} className="w-[270px] min-h-[400px] border  ">
+        <div key={i} className="w-full flex justify-center items-center">
+          <div className="w-[270px] min-h-[400px] border  ">
             <Image
               src={items.image}
               alt={items.title}
