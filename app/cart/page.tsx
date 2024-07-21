@@ -10,7 +10,7 @@ import {
   removeProductToCart,
 } from "../global/redux";
 
-const page = () => {
+const Page = () => {
   //   const data = Array.from({ length: 10 });
   const data = useSelector((state: any) => state.reducer.cart);
   const adding = useDispatch();
@@ -92,7 +92,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 
 
 

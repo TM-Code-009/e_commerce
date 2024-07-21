@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct, addProductToCart } from "./global/redux";
 
-const page = () => {
+const Page = () => {
   const adding = useDispatch();
   const data = useSelector((state: any) => state.reducer.products);
   const url = "https://669a88b39ba098ed61fffcbc.mockapi.io/stores";
@@ -64,4 +64,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
