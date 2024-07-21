@@ -31,10 +31,10 @@ const Page = () => {
 
   // const data = Array.from({ length: 10 });
   return (
-    <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
+    <main className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6  ">
       {data?.map((items: any, i: number) => (
         <div key={i} className="w-full flex justify-center items-center">
-          <div className="w-[270px] min-h-[400px] border  ">
+          <div className="w-[200px] min-h-[400px] border  ">
             <Image
               src={items.image}
               alt={items.title}
@@ -49,7 +49,7 @@ const Page = () => {
 
             <Button
               onClick={() => adding(addProductToCart(items))}
-              className="mt-3 w-[200px] h-[40px] rounded-none  bg-slate-300 font-semibold"
+              className="mt-3 w-[150px] h-[40px] rounded-none  bg-slate-300 font-semibold"
               >Add to Cart</Button>
             </div>
 
