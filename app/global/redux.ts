@@ -17,10 +17,10 @@ const redux = createSlice({
       state.cart = remove;
     },
     addProductToCart: (state, { payload }: any) => {
-      const check:any = state.cart.findIndex((el: any) => el.id === payload.id);
+      const check:any =  state.cart.findIndex((el: any) => el.id === payload.id);
 
       if (check >= 0) {
-        state.cart[check].qty += 1;
+        state.cart[check]!.qty += 1;
       } else {
         state.cart.push({ ...payload, qty: 1 });
       }
